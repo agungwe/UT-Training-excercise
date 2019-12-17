@@ -4,6 +4,7 @@ import (
 	"go/blog"
 	"go/product"
 	"go/profile"
+	"go/store"
 )
 
 func main() {
@@ -18,4 +19,8 @@ func main() {
 	blog := blog.New("Tutorial Golang", "OOP in", "Agung W")
 	blog.GetBlog()
 
+	branchStore := store.BranchStore{StoreName: "Cabang Toko Bakpia", OwnerBranch: "Agung Wicaksono"}
+	store := store.Store{BranchStore: branchStore, StoreName: "Toko Bakpia", Owner: "Dzakiy"}
+
+	store.GetBranchStore()
 }
